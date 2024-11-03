@@ -29,6 +29,15 @@ editing, testing, building and deploying hubs.
 The other python package definition file, `requirements.txt` is used solely by
 our Github Actions CI/CD pipeline.
 
+## Pre-Commit hooks: Installing
+
+The previous step, `pip install -r dev-requirements.txt`, installs the package, pre-commit.
+This is used to run a series of commands defined in the file, .pre-commit-config.yaml, to help ensure no mistakes are committed to the repo.
+
+After the pip install command execute the following:
+-- `pre-commit install`
+-- `pre-commit run --all-files`
+
 ## Setting up your fork and clones
 
 First, go to your [github profile settings](https://github.com/settings/keys)
