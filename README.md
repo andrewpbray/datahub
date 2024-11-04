@@ -31,12 +31,18 @@ our Github Actions CI/CD pipeline.
 
 ## Pre-Commit hooks: Installing
 
-The previous step, `pip install -r dev-requirements.txt`, installs the package, pre-commit.
-This is used to run a series of commands defined in the file, .pre-commit-config.yaml, to help ensure no mistakes are committed to the repo.
+The previous step, `pip install -r dev-requirements.txt`, installs the package
+[`pre-commit`](https://pre-commit.com/). This is used to run a series of
+commands defined in the file [`.pre-commit-config.yaml`](https://github.com/berkeley-dsep-infra/datahub/blob/staging/.pre-commit-config.yaml)
+to help ensure no mistakes are committed to the repo.
 
-After the pip install command execute the following:
--- `pre-commit install`
--- `pre-commit run --all-files`
+After you've installed `dev-requirements.txt`, execute the following two
+commands:
+
+```
+pre-commit install
+pre-commit run --all-files
+```
 
 ## Setting up your fork and clones
 
