@@ -38,6 +38,7 @@ gcloud container clusters create \
      --enable-network-policy \
      --create-subnetwork="" \
      --tags=hub-cluster \
+     --no-enable-insecure-kubelet-readonly-port \
      <cluster-name>
 ```
 
@@ -57,6 +58,7 @@ gcloud container node-pools create  \
     --no-enable-autoupgrade \
     --tags=hub-cluster \
     --cluster=<cluster-name> \
+    --no-enable-insecure-kubelet-readonly-port \
     user-<pool-name>-<yyyy>-<mm>-<dd>
 ```
 
