@@ -107,17 +107,17 @@ jupyterhub:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/IB134L-shared-readwrite
-            subPath: _shared/course/IB134L-shared
+            subPath: _shared/IB134L-shared
       course::1536425::enrollment_type::ta:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/IB134L-shared-readwrite
-            subPath: _shared/course/IB134L-shared
+            subPath: _shared/IB134L-shared
       course::1536425::enrollment_type::student:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/IB134L-shared
-            subPath: _shared/course/IB134L-shared
+            subPath: _shared/IB134L-shared
             readOnly: true
 
   singleuser:
