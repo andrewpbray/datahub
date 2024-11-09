@@ -71,12 +71,12 @@ jupyterhub:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/bioe-c149-readwrite
-            subPath: _shared/course/bioe-c149-readwrite
+            subPath: _shared/course/bioe-c149-shared
       course::1537116::enrollment_type::ta:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/bioe-c149-readwrite
-            subPath: _shared/course/bioe-c149-readwrite
+            subPath: _shared/course/bioe-c149-shared
       course::1537116::enrollment_type::student:
         extraVolumeMounts:
           - name: home
@@ -89,12 +89,12 @@ jupyterhub:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/mcb201b-shared-readwrite
-            subPath: _shared/course/mcb201b-shared-readwrite
+            subPath: _shared/course/mcb201b-shared
       course::1537301::enrollment_type::ta:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/mcb201b-shared-readwrite
-            subPath: _shared/course/mcb201b-shared-readwrite
+            subPath: _shared/course/mcb201b-shared
       course::1537301::enrollment_type::student:
         extraVolumeMounts:
           - name: home
@@ -107,17 +107,17 @@ jupyterhub:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/IB134L-shared-readwrite
-            subPath: _shared/IB134L-shared
+            subPath: _shared/course/IB134L-shared
       course::1536425::enrollment_type::ta:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/IB134L-shared-readwrite
-            subPath: _shared/IB134L-shared
+            subPath: _shared/course/IB134L-shared
       course::1536425::enrollment_type::student:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/IB134L-shared
-            subPath: _shared/IB134L-shared
+            subPath: _shared/course/IB134L-shared
             readOnly: true
 
   singleuser:
