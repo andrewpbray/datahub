@@ -117,12 +117,12 @@ jupyterhub:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/data100-shared-readwrite
-            subPath: _shared/course/data100-shared-readwrite
+            subPath: _shared/course/data100-shared
       course::1537664::enrollment_type::ta:
         extraVolumeMounts:
           - name: home
             mountPath: /home/jovyan/data100-shared-readwrite
-            subPath: _shared/course/data100-shared-readwrite
+            subPath: _shared/course/data100-shared
       course::1537664::enrollment_type::student:
         extraVolumeMounts:
           - name: home
