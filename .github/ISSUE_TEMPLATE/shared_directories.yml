@@ -1,4 +1,4 @@
-name: Setup Shared directories
+name: Setup shared directories
 description: To store large datasets that can be read by student notebooks
 labels: "support"
 assignees:
@@ -61,14 +61,6 @@ body:
         - stat159.datahub.berkeley.edu
         - stat20.datahub.berkeley.edu
         - other
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Shared Directory Name
-      description: What should be the name of the shared and shared-readwrite directories?
-      value: |
-        - <!-- Eg: coursename-shared and coursename-readwrite can be the directory names. Eg: data100-shared and data100-shared-readwrite are the shared and shared-readwrite  directories for the Data100 course -->
     validations:
       required: true
   - type: textarea
