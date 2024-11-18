@@ -45,6 +45,19 @@ jupyterhub:
         # this role will be assigned to...
         groups:
          - course::1535449::group::admin
+
+  custom:
+    group_profiles:
+      # DataHub Infrastructure staff
+      # https://bcourses.berkeley.edu/courses/1524699/groups#tab-80607
+      course::1524699::group::all-admins:
+        admin: true
+    admin:
+      extraVolumeMounts:
+        - name: home
+          mountPath: /home/jovyan/shared-readwrite
+          subPath: _shared
+
   singleuser:
     extraFiles:
       # DH-216
@@ -64,6 +77,11 @@ jupyterhub:
       static:
         pvcName: home-nfs-v3
         subPath: "{username}"
+      extraVolumeMounts:
+        - name: home
+          mountPath: /home/jovyan/shared
+          subPath: _shared
+          readOnly: true
     memory:
       guarantee: 3G
       limit: 3G
