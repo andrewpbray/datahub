@@ -30,7 +30,7 @@ An approximate number would do.
 
 **How much RAM per user is needed?**
 
-The default is 1GB of RAM per student.
+The default is 1 GB (One GB) of RAM per student.
 
 **Why does this class need this much RAM?**
 
