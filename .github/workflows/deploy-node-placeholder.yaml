@@ -1,5 +1,4 @@
 name: Deploy node placeholder helm chart
-# use echo ${VAR##*: } to get the value of a variable that is a string with a colon in it
 on:
   workflow_dispatch:
   push:
@@ -21,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
 
-      - name: Check if the nbde placeholder helm chart needs to be deployed
+      - name: Check if the node placeholder helm chart needs to be deployed
         run: |
           echo "PR labels: ${{ steps.pr-labels.outputs.labels }}"
           for label in $(echo -e "${{ steps.pr-labels.outputs.labels }}"); do
