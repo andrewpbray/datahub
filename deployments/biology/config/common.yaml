@@ -62,10 +62,6 @@ jupyterhub:
         mem_limit: 4096M
         mem_guarantee: 4096M
 
-      course::1537301: # MCELLBI 201B, https://github.com/berkeley-dsep-infra/datahub/issues/6385
-        mem_limit: 5120M
-        mem_guarantee: 5120M
-
       course::1536425: # IB 134L, https://github.com/berkeley-dsep-infra/datahub/issues/6481
         mem_limit: 8192M
         mem_guarantee: 8192M
