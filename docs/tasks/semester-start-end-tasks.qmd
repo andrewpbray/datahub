@@ -17,9 +17,6 @@ This document outlines the tasks for preparing DataHub for the start of a semest
 - [ ] **Identify Unused Hubs**: Identify hubs that will not be used during a particular semester
 - [ ] **Send Onboarding Email**: Send onboarding instructions to all the instructors and GSIs added to `datahub-announce` listserv
 
-### 4. Operational Readiness
-
-
 ---
 
 ## Semester End Tasks
