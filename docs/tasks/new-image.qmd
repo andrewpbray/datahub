@@ -104,7 +104,7 @@ Create a PR and merge to staging.  You can cancel the
 [`Deploy staging and prod hubs` job in Actions](https://github.com/berkeley-dsep-infra/datahub/actions/workflows/deploy-hubs.yaml),
 or just let it fail.
 
-## Add a GitHub Slack Bot
+## Subscribe to GitHub Repo in Slack
 
 Go to the #ucb-datahubs-bots channel, and run the following command:
 
