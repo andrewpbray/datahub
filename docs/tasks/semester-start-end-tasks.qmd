@@ -26,6 +26,7 @@ This document outlines the tasks for preparing DataHub for the start of a semest
   - [ ] R/RStudio (for non-rocker based images)
   - [ ] JupyterHub: Check for and apply updates to Z2JH JupyterHub (if required).
   - [ ] JupyterLab/Notebook: Check for and apply updates to JupyterLab and Notebook (if required)
+  - [ ] Conda-forge distribution
   - [ ] Otter Grader: Check for and apply updates to Otter Grader across all hubs (if required)
   - [ ] Quarto
 - [ ] **Update Hub Image**:
