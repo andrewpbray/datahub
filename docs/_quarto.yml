@@ -58,6 +58,7 @@ website:
           - tasks/github-token.qmd
           - tasks/google-sheets.qmd
           - tasks/cheatsheet.qmd
+          - tasks/semester-start-end-tasks.qmd
       - section: "Policy"
         contents:
           - policy/create_policy.qmd

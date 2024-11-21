@@ -1,0 +1,57 @@
+---
+title: "DataHub Semester Start and End Tasks"
+---
+
+This document outlines the tasks for preparing DataHub for the start of a semester and for concluding semester activities.
+
+## Semester Start Tasks
+
+### 1. Setup and Configuration
+- [ ] **Bump Replica Values**: Bump replica values in values.yaml
+- [ ] **Set Node Count**: Set the appropriate number of node count for each node pool in GKE console
+
+### 2. User Management
+- [ ] **Identify Unused Hubs**: Identify hubs that will not be used during a particular semester
+- [ ] **Send Onboarding Email**: Send onboarding instructions to all the instructors and GSIs added to `datahub-announce` listserv
+
+---
+
+## Semester End Tasks
+
+### 1. Operational Tasks
+- [ ] **Update Kubernetes**: Check for and apply updates to Kubernetes
+- [ ] **Update Ubuntu Single User Images**:
+  - [ ] Ubuntu and rocker base image.
+  - [ ] Python
+  - [ ] R/RStudio (for non-rocker based images)
+  - [ ] JupyterHub: Check for and apply updates to Z2JH JupyterHub (if required).
+  - [ ] JupyterLab/Notebook: Check for and apply updates to JupyterLab and Notebook (if required)
+  - [ ] Conda-forge distribution
+  - [ ] Otter Grader: Check for and apply updates to Otter Grader across all hubs (if required)
+  - [ ] Quarto
+- [ ] **Update Hub Image**:
+   - [ ] JupyterHub: Check for and apply updates to Z2JH JupyterHub (if required).
+   - [ ] oauthenticator
+   - [ ] ltiauthenticator 
+- [ ] **Reduce Resources**: 
+  - [ ] Scale down node placeholder pods to 0
+  - [ ] Reduce the number of nodes allocated for each node pool 
+- [ ] **Clear SQLite DB**: Clear SQLite database that caches user info for hub pods
+- [ ] **Archive User Data**: Archive user home directories across hubs (if required)
+- [ ] **Resize/Consolidate Filestores**: Resize/Consolidate filestore based on the storage snapshot (if required)
+- [ ] **Remove Config**: Remove stanzas added to provide elevated privileges to instructors, increased RAM for courses, shared directories etc..
+- [ ] **Remove Packages**: Remove packages that were requested for the previous term or older.
+- [ ] **Remove Calendar Events**: Remove calendar events added to support courses in `DataHub Scaling Events`
+- [ ] **Resolve Alerts**: Resolve any dependabot alerts reported
+- [ ] **Version Packages**: Version any packages that are unversioned in environment.yml file
+- [ ] **Update Postgres**: Check for and apply updates to Postgres server and client (if required)
+- [ ] **Create Tokens**: Create a new github [personal access token](https://docs.datahub.berkeley.edu/admins/cicd-github-actions.html#organization-secrets) for our CI/CD pipeline
+
+### 2. User Communication
+- [ ] **Backup Data**: Notify users to back up their own files.
+- [ ] **Maintenance Window**: Decide and communicate Maintenance Window (MW) dates with users
+
+### 3. Review
+- [ ] **Audit Hubs**: Audit courses and identify the ones that doesn't need their own hub
+- [ ] **Gather feedback**: If necessary, gather feedback about any features piloted during the semester
+- [ ] **Update documentation**: Review documentation and keep it up to date
