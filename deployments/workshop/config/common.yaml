@@ -25,7 +25,7 @@ jupyterhub:
       hub.jupyter.org/pool-name: core-pool-2024-05-08
     config:
       JupyterHub:
-        admin_access: false
+        admin_access: true
         authenticator_class: dummy
       Authenticator:
         admin_users:
@@ -35,6 +35,7 @@ jupyterhub:
           - felder
           - balajialwar
           - gmerritt
+          - eric_vandusen@berkeley.edu
   proxy:
     chp:
       nodeSelector:
