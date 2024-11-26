@@ -67,9 +67,22 @@ jupyterhub:
           c.QtPDFExporter.enabled = False
           c.QtPNGExporter.enabled = False
           c.WebPDFExporter.enabled = False
+      # proxy ollama
+      proxy-ollama:
+        # https://jupyter-server-proxy.readthedocs.io/en/latest/server-process.html#specifying-config-via-traitlets
+        mountPath: /etc/jupyter/jupyter_server_config.py
+        stringData: |
+          c.ServerProxy.servers = {
+            "ollama": {
+              "port": 11434
+            }
+          }
     extraEnv:
       # Unset NotebookApp from hub/values. Necessary for recent lab versions.
       JUPYTERHUB_SINGLEUSER_APP: "jupyter_server.serverapp.ServerApp"
+      OLLAMA_ORIGINS: "*"
+      OLLAMA_HOST: "0.0.0.0:11434"
+      OLLAMA_DEBUG: "1"
     nodeSelector:
       hub.jupyter.org/pool-name: small-courses-pool
     storage:
@@ -83,5 +96,5 @@ jupyterhub:
           subPath: _shared
           readOnly: true
     memory:
-      guarantee: 3G
-      limit: 3G
+      guarantee: 5G
+      limit: 5G
