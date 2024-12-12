@@ -74,7 +74,12 @@ jupyterhub:
         stringData: |
           c.ServerProxy.servers = {
             "ollama": {
-              "port": 11434
+              "command": ["ollama", "serve"],
+              "port": 11434,
+              # This is not a user-facing web application
+              "launcher_entry": {
+                "enabled": False
+              }
             }
           }
     extraEnv:
